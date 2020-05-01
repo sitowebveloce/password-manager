@@ -1,0 +1,390 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.button-black {
+    background-color: black;
+    border-color: black;
+}
+
+.button-black.button-clear,
+.button-black.button-outline {
+    background-color: transparent;
+    color: black;
+}
+
+.button-black.button-clear {
+    border-color: transparent;
+}
+
+.button-small {
+    font-size: .8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 1.5rem;
+}
+
+.button-large {
+    font-size: 1.4rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding: 0 2rem;
+}
+
+.loginFormDiv,
+.signupFormDiv,
+.addFormDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+.form {
+    position: relative;
+    margin: 0;
+    padding: 0 50px;
+    width: 50%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: -60px;
+    cursor: pointer;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.msgsContent {
+    min-height: 60px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 330px;
+    min-height: 60px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 6px;
+    z-index: 100;
+    background-color: rgba(255, 0, 255, .1);
+}
+
+
+/* NAV  */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    height: 33px;
+}
+
+nav span {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+nav span.logo {
+    flex-grow: 10;
+    cursor: default;
+}
+
+nav span.exit {
+    flex-grow: 0.5;
+}
+
+nav span.user {
+    flex-grow: 0.5;
+}
+
+.or {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+input {
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid slateblue !important;
+}
+
+.App:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 100%;
+    height: 20%;
+    background: rgba(247, 4, 247, 0.4);
+    /* transform-origin: top; */
+    transform: skewY(-25deg);
+    z-index: -1;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    transform: rotate(-35deg);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.title {
+    font-size: 6rem !important;
+}
+
+.manager {
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.manager-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.add-close {
+    transition: 0.6s ease-in-out;
+    font-size: 1.8rem;
+    animation: spin 2s 1s infinite;
+}
+
+.add-open {
+    transition: 0.6s ease-in-out;
+    font-size: 1.8rem;
+    animation: spin 2s 1s infinite;
+}
+
+
+/* EYE  */
+
+.eye {
+    float: right;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.eyeTable {
+    justify-self: start;
+}
+
+.eyeTable {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 6px;
+    margin: 2px;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.eye:hover {
+    transform: scale(1.1);
+}
+
+.emojis:hover {
+    transition: .6s ease-in-out;
+}
+
+.emojis:hover {
+    transform: scale(1.2);
+}
+
+
+/* TABLE */
+
+table {
+    padding: 5px !important;
+    border-collapse: collapse !important;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    text-align: center !important;
+}
+
+.noboders {
+    border-bottom: none !important;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+
+/* SEARCH  */
+
+.search-input {
+    width: 40% !important;
+}
+
+.search-icon-container {
+    transition: 0.6s ease-in-out;
+    display: inline-block;
+}
+
+.search-icon {
+    cursor: pointer;
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+.search-icon:hover {
+    transform: scale(1.4);
+}
+
+
+/* MEDIA QUERY  */
+
+@media (max-width:800px) {
+    .tableDate {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 100%;
+    }
+    .title {
+        font-size: 3.6rem !important;
+        font-weight: 600 !important;
+    }
+    .tableDate {
+        display: none;
+    }
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        word-wrap: break-word;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50% !important;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    td:nth-of-type(1):before {
+        font-weight: bold;
+        content: "Name";
+    }
+    td:nth-of-type(2):before {
+        content: "user";
+        font-weight: bold;
+    }
+    td:nth-of-type(3):before {
+        content: "Password";
+        font-weight: bold;
+    }
+    td:nth-of-type(5):before {
+        content: "Actions" !important;
+        font-weight: bold;
+    }
+}
+
+
+/* KEYFRAME */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
